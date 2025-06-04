@@ -1,5 +1,4 @@
-# FUNCIONES DE APLICACIÓN DE CONTACTOS
-
+# FUNCIONES DE APLICACIÓN DE CONTACTO
 
 # Diccionario donde los contactos estarán clasificados
 # Cada categoría representa una clave con un valor ("contacto") a asignar.
@@ -47,12 +46,14 @@ def buscar_contacto():
 # Función de "Opción 3" que muestra todos los contactos.
 def mostrar_contactos():
     print("\nLista de contactos:")
-    # Se itera sobre cada categoría del diccionario "contactos".
-    for categoria, lista in contactos.items(): 
-        print(f"\n{categoria.capitalize()}:") # Imprime la categoría.
-        # Se itera dentro de cada categoría.
+
+# Se implementa método de ordenamiento previo a mostrar la lista de contactos 
+    contactos_ordenados = {categoria: dict(sorted(lista.items())) for categoria, lista in contactos.items()}
+    
+    for categoria, lista in contactos_ordenados.items():
+        print(f"\n{categoria.capitalize()}:")  # Imprime la categoría.
         for nombre, telefono in lista.items():
-            print(f"{nombre}: {telefono}") #  Se imprimen los contactos.  
+            print(f"{nombre}: {telefono}")  # Se imprimen los contactos ordenados.
 
 
 # Funsión que muestra el menú de opciones que puede elegir el usuario.

@@ -1,4 +1,3 @@
-
 # ESTRUCTURA DE DATOS: 
 # Utilizaremos un diccionario donde los contactos estarán organizados por categorías.
 
