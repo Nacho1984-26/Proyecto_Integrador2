@@ -1,4 +1,4 @@
-# FUNCIONES DE PLICACIÓN DE CONTACTOS
+# FUNCIONES DE APLICACIÓN DE CONTACTOS
 
 
 # Diccionario donde los contactos estarán clasificados
