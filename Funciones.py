@@ -1,3 +1,5 @@
+import time
+
 # FUNCIONES DE APLICACIÓN DE CONTACTO
 
 # Diccionario donde los contactos estarán clasificados
@@ -34,12 +36,17 @@ def buscar_contacto():
     if categoria in contactos:
         nombre = input("Ingrese el nombre del contacto a buscar: ").strip()
 
+        inicio = time.perf_counter()
+  # Marca el inicio
         # Se evalúa si el nombre ingresado se encuentra dentro de "contactos"
         if nombre in contactos[categoria]: 
             # Si existe imprime su nombre y número de teléfono.
             print(f"Contacto encontrado: {nombre} - {contactos[categoria][nombre]}")
         else:
             print("El contacto no existe en esta categoría.")
+        fin = time.perf_counter()
+  # Marca el fin
+        print(f"Tiempo de ejecución: {fin - inicio:.4f} segundos")
     else:
         print("Categoría no válida.")
 
