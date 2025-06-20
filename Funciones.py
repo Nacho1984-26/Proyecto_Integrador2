@@ -36,7 +36,7 @@ def buscar_contacto():
     if categoria in contactos:
         nombre = input("Ingrese el nombre del contacto a buscar: ").strip()
 
-        inicio = time.perf_counter()
+        inicio = time.perf_counter() # Comienzo de medición de tiempo de ejecución
   # Marca el inicio
         # Se evalúa si el nombre ingresado se encuentra dentro de "contactos"
         if nombre in contactos[categoria]: 
@@ -44,11 +44,14 @@ def buscar_contacto():
             print(f"Contacto encontrado: {nombre} - {contactos[categoria][nombre]}")
         else:
             print("El contacto no existe en esta categoría.")
-        fin = time.perf_counter()
+        fin = time.perf_counter() # Finalización de medición de tiempo de ejecución
   # Marca el fin
         print(f"Tiempo de ejecución: {fin - inicio:.4f} segundos")
     else:
         print("Categoría no válida.")
+
+
+        
 
 # Función de "Opción 3" que muestra todos los contactos.
 def mostrar_contactos():
